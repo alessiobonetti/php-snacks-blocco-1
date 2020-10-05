@@ -1,45 +1,39 @@
 <?php
-  $matches = [
-    //array giornate campionato
-    "giornata campionato" => [
-      // numero giornata
-      "prima" => [
-        // dove
-        "luogo" => [
-
-          "Bologna" => [
-            [
-              "home_squad" => [
-                "name" => "Fortitudo",
-                "points" => "88"
-              ],
-
-              "away_squad" => [
-                "name" => "Virtus",
-                "points" => "75"
-              ],
-            ];
-          ],
-
-          "Milano" => [
-            [
-              "home_squad" => [
-                "name" => "Olimpia Milano",
-                "points" => "55"
-              ],
-
-              "away_squad" => [
-                "name" => "Cantù",
-                "points" => "60"
-              ],
-            ];
-          ],
-        ],
-      ],
+$matches = [
+    [
+        "home_team" => "Cantù",
+        "away_team" => "Olimpia Milano",
+        "home_team_points" => 70,
+        "away_team_points" => 45,
     ],
-  ];
 
-  var_dump($matches ["giornata campionato"]["prima"]["luogo"]["Bologna"]);
+    [
+        "home_team" => "Fortitudo Pompea Bologna",
+        "away_team" => "Virtus",
+        "home_team_points" => 89,
+        "away_team_points" => 83,
+    ],
+
+    [
+        "home_team" => "Pallacanestro Trieste",
+        "away_team" => "Virtus Roma",
+        "home_team_points" => 72,
+        "away_team_points" => 33,
+    ],
+    [
+        "home_team" => "Openjobmetis Varese",
+        "away_team" => "Germani Basket Brescia",
+        "home_team_points" => 101,
+        "away_team_points" => 99,
+    ],
+];
+
+
+for($i=0; $i<count($matches); $i++){
+
+  $results = $results . $matches[i]["home_team"] . " - " . $matches[i]["away_team"] . " | " . $matches[i]["home_team_points"] . " - " . $matches[i]["away_team_points"];
+};
+
  ?>
 
  <!DOCTYPE html>
@@ -49,6 +43,8 @@
      <title>php snack 1</title>
    </head>
    <body>
+
+     <p><?php echo($results) ?></p>
 
    </body>
  </html>
