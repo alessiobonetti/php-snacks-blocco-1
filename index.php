@@ -31,7 +31,7 @@ $matches = [
 
 for($i=0; $i<count($matches); $i++){
 
-  $results = $results . $matches[i]["home_team"] . " - " . $matches[i]["away_team"] . " | " . $matches[i]["home_team_points"] . " - " . $matches[i]["away_team_points"];
+  $results = $results . $matches[$i]["home_team"] . " - " . $matches[$i]["away_team"] . " | " . $matches[$i]["home_team_points"] . " - " . $matches[$i]["away_team_points"] . "<br>";
 };
 
  ?>
