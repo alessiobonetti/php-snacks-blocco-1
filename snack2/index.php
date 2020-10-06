@@ -10,8 +10,10 @@ $message = "";
       $message = "Hai accesso";
     } else {
       $message = "non hai accesso";
+      die
     } else {
     $message = "Inserisci tutti i campi obbligatori";
+    die
     }
   };
 ?>
